@@ -43,13 +43,13 @@ public class SearchServlent extends HttpServlet {
 				SearchResult = SQL_connection.stateSQL(SearchString);
 			}
 			request.setAttribute("SearchResult", SearchResult);
-			RequestDispatcher rd = request.getRequestDispatcher("index.jsp");
+			RequestDispatcher rd = request.getRequestDispatcher("results.jsp");
 			rd.forward(request, response);
 
 		} else {
 
 			request.setAttribute("SearchResult", SearchResult);
-			RequestDispatcher rd = request.getRequestDispatcher("index.jsp");
+			RequestDispatcher rd = request.getRequestDispatcher("results.jsp");
 			rd.forward(request, response);
 
 		}
